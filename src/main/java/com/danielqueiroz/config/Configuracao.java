@@ -4,7 +4,6 @@ import redis.clients.jedis.Jedis;
 
 public class Configuracao {
 
-	private Conexao conexao;
 	private Jedis jedis;
 
 	private Jedis getConexao() {
