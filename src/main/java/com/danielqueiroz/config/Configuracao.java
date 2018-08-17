@@ -30,4 +30,8 @@ public class Configuracao {
 		return getConexao().incrBy(chave, valor);
 	}
 
+	public long getTamanhoConfig(String chave) {
+		return getConexao().strlen(chave);
+	}
+	
 }
