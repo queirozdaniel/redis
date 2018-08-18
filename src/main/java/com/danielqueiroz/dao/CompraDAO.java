@@ -34,6 +34,7 @@ public class CompraDAO {
 		return compras;
 	}
 
+	@SuppressWarnings("unchecked")
 	public String compraParaJson(Compra compra) {
 		JSONObject object = new JSONObject();
 		object.put("produto", compra.getProduto());

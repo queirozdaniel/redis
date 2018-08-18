@@ -13,13 +13,13 @@ public class SerializadorObjetosTest {
 	@Before
 	public void before() {
 		serializador = new SerializadorRedis();
-		pessoa = new Pessoa("Henrique", "Lobo");
+		pessoa = new Pessoa("Daniel", "Queiroz");
 	}
 
 	@Test
 	public void testSetObjeto() throws Exception {
-		serializador.setObjeto("pessoa:henriqueLobo", pessoa);
-		Pessoa serializado = (Pessoa) serializador.getObjeto("pessoa:henriqueLobo");
+		serializador.setObjeto("pessoa:danielQueiroz", pessoa);
+		Pessoa serializado = (Pessoa) serializador.getObjeto("pessoa:danielQueiroz");
 		assertNotNull(serializado);
 		assertEquals(pessoa.getNome(), serializado.getNome());
 		assertEquals(pessoa.getSobrenome(), serializado.getSobrenome());
